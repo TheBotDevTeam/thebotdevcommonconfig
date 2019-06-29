@@ -4,12 +4,8 @@
 {% endblock %}
 {% block body %}
     Use
-    <code><a href="{{ url_for('get_raw_config', real_shard="0", _external=True) }}">
-        {{ url_for('get_raw_config', real_shard="0", _external=True) }}</a></code>
+    <code><a href="{{ url_for('get_raw_config', real_shard="0", auth=config.configpwd, _external=True) }}">
+        {{ url_for('get_raw_config', real_shard="0", auth=config.configpwd, _external=True) }}</a></code>
     for the bots
-    <pre>
-    <code>
-        {{ config }}
-    </code>
-    </pre>
+    <pre><code>{{ readable_config }}</code></pre>
 {% endblock %}

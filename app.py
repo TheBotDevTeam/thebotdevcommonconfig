@@ -46,7 +46,7 @@ def index():
 @app.route('/config/get')
 @require_auth
 def get_config():
-    return render_template('get-config.html', config=json.dumps(config, indent=4))
+    return render_template('get-config.html', readable_config=json.dumps(config, indent=4), config=config)
 
 
 @app.route('/config/set', methods=['GET'])
