@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}
+    Update config
+{% endblock %}
+{% block body %}
+    <form action="{{ url_for('set_config_now') }}" method="post">
+        <p><label>Neues Token: <input type="text" name="token" value="{{ token }}" placeholder="Token here"></label></p>
+        <p><label>Echtshards: <input type="text" name="shards" value="{{ shards }}" placeholder="Echtshards"></label></p>
+        <p><label>Discord shards: <input type="text" name="dshards" value="{{ dshards }}" placeholder="Discordshards"></label></p>
+        <p><input type="submit" aria-label="Set token" value="Set token"></p>
+    </form>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+    Show config
+{% endblock %}
+{% block body %}
+    Use
+    <code><a href="{{ url_for('get_raw_config', real_shard="0", _external=True) }}">
+        {{ url_for('get_raw_config', real_shard="0", _external=True) }}</a></code>
+    for the bots
+    <pre>
+    <code>
+        {{ config }}
+    </code>
+    </pre>
+{% endblock %}

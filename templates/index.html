@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}
+    Index
+{% endblock %}
+
+{% block body %}
+    <ul>
+        <li><a href="{{ url_for('set_config') }}">Set config</a></li>
+        <li><a href="{{ url_for('get_config') }}">Get config</a></li>
+    </ul>
+{% endblock %}
